@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+{% include "Sidebar_deliverable.html" %}
+<div class="col-lg-9 col-xl-10 ">
+    <div class="panel panel--loose panel--raised  base-margin">
+        <div class="text-center">
+            <label class="text-size-32 text-secondary">The following data was provided:</label>
+        </div>
+    <p>Customer Name: {{ customer_name }}</p>
+    <p>ap Count: {{ ap_count }}</p>
+    <p>Hostname: {{ hostname }}</p>
+    <p>Username: {{ username }}</p>
+    <p>Password: {{ password }}</p>
+    <p>Vlan ID: {{ vlan_id }}</p>
+    <p>Ip address: {{ ip }}</p>
+    <p>Subnet :{{ subnet }}</p>
+    <p>Gateway IP Management :{{ gateway_mgmt  }}</p>
+    <p>Country: {{ country }}</p>
+    <p>Wlc Model: {{ wlc_model }}</p>
+    <p>Out of Band Management IP:{{ oob_management }}</p>
+    <p>Out of Band Management Gateway:{{ oob_gateway }}</p>
+
+    <div class="text-center">
+        <a href="http://localhost:8001/OneDrive%20-%20Cisco/Desktop/IWILD/deliverables/downloads/generatedNIP.docx" download><button class="btn btn--primary base-margin ">Download NIP Word File</button></a>
+    </div>
+    </div>
+</div>
+
+{% endblock content %}

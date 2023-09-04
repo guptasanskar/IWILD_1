@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+{% include "Sidebar_deliverable.html" %}
+<div class="col-lg-9 col-xl-10 ">
+    <div class="panel panel--loose panel--raised  base-margin">
+        <div class="text-center">
+        <label class="text-size-32 text-secondary">The following data was provided:</label>
+        </div>
+        <p>Customer Name: {{ customer_name }}</p>
+        <p>User Count: {{ user_count }}</p>
+        <p>Deployment Type: {{ deployment_type }}</p>
+        <p>Controller Model: {{ controller_model }}</p>
+        <p>In Scope Area for Coverage: {{ in_scope_area }}</p>
+        <p>Out of Scope Area for Coverage: {{ out_of_scope_area }}</p>
+        <p>RF Environment Type: {{ rf_environment_type }}</p>
+        <p>User Type: {{ user_type|join:', ' }}</p>
+        <p>Devices Type: {{ devices_type|join:', ' }}</p>
+
+        <div class="text-center">
+            <a href="http://localhost:8001/OneDrive%20-%20Cisco/Desktop/IWILD/deliverables/downloads/generatedSRD.docx"
+                download><button class="btn btn--primary base-margin ">Download SRD Word File</button></a>
+        </div>
+    </div>
+</div>
+\
+{% endblock content %}

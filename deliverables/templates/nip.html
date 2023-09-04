@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+{% include "Sidebar_deliverable.html" %}
+<div class="col-lg-9 col-xl-10 ">
+    <div class="panel panel--loose panel--raised  base-margin">
+        <div class="text-center">
+            <label class="text-size-32 text-secondary">NIP Document Requirement</label>
+        </div>
+
+        <br>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group base-margin-bottom">
+                <div class="form-group__text">
+                    <input type="text" name="customer_name" id=" customer_name" rows="3" required></input>
+                    <label class="text-size-18 text-secondary" for="customer_name">
+                        <span>Enter Customer Name:</span>
+                        <span title="This is a required field">*</span>
+                    </label>
+                </div>
+            </div>
+            <div class="form-group base-margin-bottom">
+                <div class="form-group__text">
+                    <input type="ap_count number" name="ap_count" id=" ap_count " rows="3" required></input>
+                    <label class="text-size-18 text-secondary" for="customer_name">
+                        <span>Enter AP count:</span>
+                        <span title="This is a required field">*</span>
+                    </label>
+                </div>
+            </div>
+            <div class="form-group base-margin-bottom">
+                <div class="form-group__text">
+                    <input type="hostname text" name="hostname" id=" hostname " rows="3" required></input>
+                    <label class="text-size-18 text-secondary" for="customer_name">
+                        <span>Enter Hostname:</span>
+                        <span title="This is a required field">*</span>
+                    </label>
+                </div>
+            </div>
+            <div class="form-group base-margin-bottom">
+                <div class="form-group__text">
+                    <input type="username text" name="username" id=" username " rows="3" required></input>
+                    <label class="text-size-18 text-secondary" for="customer_name">
+                        <span>Enter Username:</span>
+                        <span title="This is a required field">*</span>
+                    </label>
+                </div>
+            </div>
+            <div class="form-group base-margin-bottom">
+                <div class="form-group__text">
+                    <input type="password text" name="password" id=" password " rows="3" required></input>
+                    <label class="text-size-18 text-secondary" for="customer_name">
+                        <span>Enter password:</span>
+                        <span title="This is a required field">*</span>
+                    </label>
+                </div>
+            </div>
+            <div class="form-group base-margin-bottom">
+                <div class="form-group__text">
+                    <input type="vlan_id number" name="vlan_id" id=" vlan_id " rows="3" required></input>
+                    <label class="text-size-18 text-secondary" for="customer_name">
+                        <span>Enter Vlan Id:</span>
+                        <span title="This is a required field">*</span>
+                    </label>
+                </div>
+            </div>
+            <div class="form-group base-margin-bottom">
+                <div class="form-group__text">
+                    <input type="ip text" name="ip" id=" ip" rows="3" required></input>
+                    <label class="text-size-18 text-secondary" for="customer_name">
+                        <span>Enter IP Address:</span>
+                        <span title="This is a required field">*</span>
+                    </label>
+                </div>
+            </div>
+            <div class="form-group base-margin-bottom">
+                <div class="form-group__text">
+                    <input type="subnet number" name="subnet" id=" subnet " rows="3" required></input>
+                    <label class="text-size-18 text-secondary" for="customer_name">
+                        <span>Enter Subnet:</span>
+                        <span title="This is a required field">*</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group base-margin-bottom">
+                <div class="form-group__text">
+                    <input type="gateway_mgmt text" name="gateway_mgmt" id=" gateway_mgmt " rows="3" required></input>
+                    <label class="text-size-18 text-secondary" for="customer_name">
+                        <span>Enter Gateway IP Management</span>
+                        <span title="This is a required field">*</span>
+                    </label>
+                </div>
+            </div>
+            <div class="form-group base-margin-bottom">
+                <div class="form-group__text">
+                    <input type="country text" name="country" id=" country " rows="3" required></input>
+                    <label class="text-size-18 text-secondary" for="customer_name">
+                        <span>Enter Country:</span>
+                        <span title="This is a required field">*</span>
+                    </label>
+                </div>
+            </div>
+            <div class="form-group base-margin-bottom">
+                <div class="form-group__text">
+                    <input type="wlc_model text" name="wlc_model" id=" wlc_model " rows="3" required></input>
+                    <label class="text-size-18 text-secondary" for="customer_name">
+                        <span>Enter WLC Model:</span>
+                        <span title="This is a required field">*</span>
+                    </label>
+                </div>
+            </div>
+            <div class="form-group base-margin-bottom">
+                <div class="form-group__text">
+                    <input type="oob_management text" name="oob_management" id=" oob_management " rows="3"
+                        required></input>
+                    <label class="text-size-18 text-secondary" for="customer_name">
+                        <span>Enter Out of Band Management IP:</span>
+                        <span title="This is a required field">*</span>
+                    </label>
+                </div>
+            </div>
+            <div class="form-group base-margin-bottom">
+                <div class="form-group__text">
+                    <input type="oob_gateway text" name="oob_gateway" id=" oob_gateway " rows="3" required></input>
+                    <label class="text-size-18 text-secondary" for="customer_name">
+                        <span>Enter Out of Band Management Gateway:</span>
+                        <span title="This is a required field">*</span>
+                    </label>
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="btn btn--primary base-margin " type="submit">Submit</button>
+            </div>
+
+
+    </div>
+    
+</div>
+
+{% endblock content %}

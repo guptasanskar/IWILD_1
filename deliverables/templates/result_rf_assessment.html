@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+{% include "Sidebar_deliverable.html" %}
+<div class="col-lg-9 col-xl-10 ">
+    <div class="panel panel--loose panel--raised  base-margin">
+        <div class="text-center">
+            <label class="text-size-32 text-secondary">The following data was provided</label>
+        </div>
+        <p>AP on stick Deployment (Pre-Deployment): {{ stick_deployment_checked }}</p>
+        <p>Predictive: {{  predictive_checked }}</p>
+        <p>Post Deployment Suvery: {{ post_deployment_checked }}</p>
+        <p class="text-size-20 text-secondary">Total hours Requried for RF Assessment: {{ total_hours }}</p>
+    </div>
+</div>
+{% endblock content %}

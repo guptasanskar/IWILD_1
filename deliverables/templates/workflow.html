@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+{% include "Sidebar_deliverable.html" %}
+
+<div class="col-lg-9 col-xl-10 ">
+    <h5> Welcome to Workflow Page</h5>
+    <img src="{% static 'img/under_maintainance.jpg' %}" style="height: 100%;
+    width: 100%" alt="My Image">
+</div>
+{% endblock content %}

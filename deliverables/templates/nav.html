@@ -1,0 +1,32 @@
+<nav class="header" id="styleguideheader" role="navigation">
+    <div class="container-fluid">
+        <div class="header-panels">
+            <div class="header-panel hidden-md-down">
+                <a class="header__logo" href="http://www.cisco.com" target="_blank">
+                    <span class="icon-cisco"></span>
+                </a>
+                <h1 class="header__title">
+                    <span ><a style="color:red">i</a>WiLD</span>
+                </h1>
+            </div>
+            <div class="header-panel header-panel--center base-margin-left base-margin-right hidden-lg-up">
+                <a class="header__logo" href="http://www.cisco.com" target="_blank">
+                    <span class="icon-cisco"></span>
+                </a>
+            </div>
+            <div class="header-panel header-panel--right hidden-md-down">
+                <a href="{% url 'srd' %}" class="header-item">Deliverables</a>
+                <a href="{% url 'rf_assessment' %}" class="header-item">Presales</a>
+                <a href="{% url 'learning' %}" class="header-item">Learning</a>
+                <a href="{% url 'workflow' %}" class="header-item">Workflow</a>
+                <div id="themeSwitcher" class="dropdown dropdown--left dropdown--offset-qtr header-item">
+                    <a class="header-toolbar__link">Theme</a>
+                    <div class="dropdown__menu">
+                        <a id="theme-default" class="selected">Default</a>
+                        <a id="theme-dark">Dark</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

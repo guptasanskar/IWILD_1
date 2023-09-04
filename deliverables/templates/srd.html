@@ -1,0 +1,202 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+{% include "Sidebar_deliverable.html" %}
+<div class="col-lg-9 col-xl-10 ">
+    <div class="panel panel--loose panel--raised  base-margin">
+        <div class="text-center">
+            <label class="text-size-32 text-secondary">SRD Document Requirement</label>
+        </div>
+       
+        <br>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group base-margin-bottom">
+                <div class="form-group__text">
+                    <input type="text" name="customer_name"
+                        id=" customer_name" rows="3" required ></input>
+                    <label  class="text-size-18 text-secondary" for="customer_name">
+                        <span>Enter Customer Name:</span>
+                        <span title="This is a required field">*</span>
+                    </label>
+                </div>
+            </div>
+            <div class="form-group base-margin-bottom">
+                <div class="form-group__text">
+                    <input type="user_count text" name="user_count"
+                        id=" user_count input-state-required" rows="3" required></input>
+                    <label  class="text-size-18 text-secondary" for="customer_name">
+                        <span>Enter User count:</span>
+                        <span title="This is a required field">*</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- <div class="form-group base-margin-bottom">
+                <div class="form-group__text">
+                    <textarea type=" in_scope_area text" name="in_scope_area"
+                        id=" in_scope_area textarea-state-required" rows="3" required></textarea>
+                    <label  class="text-size-18 text-secondary" for="textarea-state-required">
+                        <span>In Scope Area for Coverage:</span>
+                        <span title="This is a required field">*</span>
+                    </label>
+                </div>
+            </div> -->
+            <div class="form-group base-margin-bottom">
+                <label class="text-size-18 text-secondary" for="deployment_type">Deployment Type:</label><hr>
+                <div class="row base-margin">
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <label for="dnac" class="radio">DNAC </label>&nbsp;&nbsp;
+                        <input type="radio" id="dnac" name="deployment_type" value="dnac">
+                        <span class="radio__input"></span>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <label for="non_dnac" class="radio">Non DNAC </label>&nbsp;&nbsp;
+                        <input type="radio" id="non_dnac" name="deployment_type" value="non_dnac">
+                        <span class="radio__input"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" form-group col-md-6 base-margin-bottom">
+                <div class="form-group dropdown">
+                    <div class="form-group__text select">
+                        <input id="controller_model select-state-required" name="controller_model"
+                            value="Select an Option" required>
+                        <label class="text-size-18 text-secondary" for="controller_model select-state-required">
+                            Controller Model:
+                            <span title="this is a required field">*</span>
+                        </label>
+                    </div>
+                    <div class="dropdown__menu">
+                        <a value="9800-L">9800-L</a>
+                        <a value="9800-CL">9800-CL</a>
+                        <a value="9800-40">9800-40</a>
+                        <a value="9800-80">9800-80</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group base-margin-bottom">
+                <div class="form-group__text">
+                    <textarea type=" in_scope_area text" name="in_scope_area"
+                        id=" in_scope_area textarea-state-required" rows="3" required></textarea>
+                    <label  class="text-size-18 text-secondary" for="textarea-state-required">
+                        <span>In Scope Area for Coverage:</span>
+                        <span title="This is a required field">*</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group base-margin-bottom">
+                <div class="form-group__text">
+                    <textarea type=" out_of_scope_area text" name="out_of_scope_area"
+                        id=" out_of_scope_area textarea-state-required" rows="3" required></textarea>
+                    <label  class="text-size-18 text-secondary" for="textarea-state-required">
+                        <span>Out of Scope Area for Coverage:</span>
+                        <span title="This is a required field">*</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group base-margin-bottom">
+                <label  class="text-size-18 text-secondary" for="rf_environment_type">RF Environment Type:</label><hr>
+                <div class="row base-margin">
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <label for="enterprise" class="radio">Enterprise </label>&nbsp;&nbsp;
+                        <input type="radio" id="enterprise" name="rf_environment_type" value="enterprise">
+                        <span class="radio__input"></span>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <label for="stadium" class="radio">Stadium </label>&nbsp;&nbsp;
+                        <input type="radio" id="stadium" name="rf_environment_type" value="stadium">
+                        <span class="radio__input"></span>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <label for="convention_centre" class="radio">Convention Centre </label>&nbsp;&nbsp;
+                        <input type="radio" id="convention_centre" name="rf_environment_type" value="convention_centre">
+                        <span class="radio__input"></span>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <label for="outdoor_areas" class="radio">Outdoor Areaas </label>&nbsp;&nbsp;
+                        <input type="radio" id="outdoor_areas" name="rf_environment_type" value="outdoor_areas">
+                        <span class="radio__input"></span>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <label for="guest_houses" class="radio">Guest Houses</label>&nbsp;&nbsp;
+                        <input type="radio" id="guest_houses" name="rf_environment_type" value="guest_houses">
+                        <span class="radio__input"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group base-margin-bottom">
+                <label  class="text-size-18 text-secondary" for="devices_type">User Type:</label><hr>
+                <div class="row base-margin">
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <label for="employee" class="checkbox"> Employee</label>&nbsp;&nbsp;
+                        <input type="checkbox" id="employee" name="user_type" value="Employee">
+                        <span class="checkbox__input"></span>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <label for="guest" class="checkbox"> Guest</label>&nbsp;&nbsp;
+                        <input type="checkbox" id="guest" name="user_type" value="Guest" >
+                        <span class="checkbox__input"></span>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <label for="contractors" class="checkbox"> Contractors</label>&nbsp;&nbsp;
+                        <input type="checkbox" id="contractors" name="user_type" value="Contractors" >
+                        <span class="checkbox__input"></span>
+                    </div>
+                </div>
+            </div><br>
+            <div class="form-group base-margin-bottom">
+                <label class="text-size-18 text-secondary"for="devices_type">Device Type:</label><hr>
+                <div class="row base-margin flex flex-left flex-wrap">
+                    <div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label for="windows" class="checkbox"> Windows</label>
+                        <input type="checkbox" id="windows" name="devices_type" value="Windows">
+                        <span class="checkbox__input"></span>
+                    </div>
+                    <div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label for="macbook" class="checkbox"> Macbook</label>
+                        <input type="checkbox" id="macbook" name="devices_type" value="Macbook" >
+                        <span class="checkbox__input"></span>
+                    </div>
+                    <div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label for="iphone" class="checkbox"> Iphone</label>
+                        <input type="checkbox" id="iphone" name="devices_type" value="Iphone" >
+                        <span class="checkbox__input"></span>
+                    </div>
+                    <div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label for="andriod" class="checkbox"> Andriod</label>
+                        <input type="checkbox" id="andriod" name="devices_type" value="Andriod" >
+                        <span class="checkbox__input"></span>
+                    </div>
+                    <div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label for="printer" class="checkbox"> Printer</label>
+                        <input type="checkbox" id="printer" name="devices_type" value="Printer" >
+                        <span class="checkbox__input"></span>
+                    </div>
+                    <div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label for="voip" class="checkbox"> VoIP (Wireless Phone)</label>
+                        <input type="checkbox" id="voip" name="devices_type" value=" VoIP (Wireless Phone)" >
+                        <span class="checkbox__input"></span>
+                    </div>
+                    <div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label for="video_conferencing_devices" class="checkbox"> Video Conferencing Devices</label>
+                        <input type="checkbox" id="video_conferencing_devices" name="devices_type" value="Video Conferencing Devices" >
+                        <span class="checkbox__input"></span>
+                    </div>
+                   </div>
+            </div>
+            <div class="text-center">
+                <button class="btn btn--primary base-margin " type="submit">Submit</button>
+            </div>
+           
+            </div>
+
+    </div>
+</div>
+</div>
+{% endblock content %}
